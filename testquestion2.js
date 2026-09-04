@@ -11,7 +11,7 @@ function setup(){
     movingObject.height = 30;
     movingObject.collider = "dynamic";
     movingObject.mass = 1;
-    floor = new Sprite(2400,20,1200,20)
+    floor = new Sprite();
     floor.x = 1200;
     floor.y = 390;
     floor.width = 2400;
