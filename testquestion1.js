@@ -10,15 +10,17 @@ function setup(){
     fallingObject.width = 30;
     fallingObject.height = 30;
     fallingObject.collider = "dynamic";
+    fallingObject.mass = 1;
     floor = new Sprite(2400,20,1200,20)
     floor.x = 0;
-    floor.y = 10;
+    floor.y = 390;
     floor.width = 2400;
     floor.height = 20;
     floor.collider = "static";
-    world.gravity.y = -10
+    world.gravity.y = 10
 }
-function Draw(){
-    background(-1)
+function draw(){
+    background(220);
+
 }
 
