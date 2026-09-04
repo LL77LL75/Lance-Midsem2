@@ -11,9 +11,8 @@ function setup(){
     movingObject.height = 30;
     movingObject.collider = "dynamic";
     movingObject.mass = 1;
-    movingObject.bouciness = -1000;
     floor = new Sprite(2400,20,1200,20)
-    floor.x = 0;
+    floor.x = 1200;
     floor.y = 390;
     floor.width = 2400;
     floor.height = 20;
@@ -21,10 +20,13 @@ function setup(){
     world.gravity.y = 10
 }
 function draw(){
+    movingObject.vel.x = 10;
     background(220);
     camera.x = movingObject.x;
-    if (kb.presses(" ")){
-        movingObject.vel.y = -5;
+    if (movingObject.colliding(floor)){
+        if (kb.presses(" ") || mouse.presses()){
+            movingObject.vel.y = -5;
+        }
     }
 }
 
